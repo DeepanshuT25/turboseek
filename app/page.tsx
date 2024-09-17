@@ -14,6 +14,7 @@ import {
   ParsedEvent,
   ReconnectInterval,
 } from "eventsource-parser";
+import { ArrowLeft } from "lucide-react";
 
 export default function Home() {
   const [promptValue, setPromptValue] = useState("");
@@ -22,6 +23,7 @@ export default function Home() {
   const [sources, setSources] = useState<{ name: string; url: string }[]>([]);
   const [isLoadingSources, setIsLoadingSources] = useState(false);
   const [answer, setAnswer] = useState("");
+  const [showHero, setShowHero] = useState(true)
   const [similarQuestions, setSimilarQuestions] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
   const chatContainerRef = useRef<HTMLDivElement>(null);
@@ -33,6 +35,7 @@ export default function Home() {
     setLoading(true);
     setQuestion(newQuestion);
     setPromptValue("");
+    setShowHero(false);
 
     await Promise.all([
       handleSourcesAndAnswer(newQuestion),
@@ -116,6 +119,7 @@ export default function Home() {
   }
 
   const reset = () => {
+    setShowHero(true);
     setShowResult(false);
     setPromptValue("");
     setQuestion("");
@@ -123,10 +127,27 @@ export default function Home() {
     setSources([]);
     setSimilarQuestions([]);
   };
+  const handleBack = () => {
+    if (!showHero) {
+      reset()
+    } else {
+      // Navigate to previous page (you might want to use Next.js router here)
+      window.history.back()
+    }
+  }
 
   return (
-    <>
-      <Header />
+    <div className="flex-grow relative overflow-hidden">
+    <header className="relative z-10 flex items-center justify-between p-4">
+          <button
+            onClick={handleBack}
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors duration-200"
+          >
+            <ArrowLeft className="w-6 h-6 text-gray-600" />
+          </button>
+        <Header />
+        </header>
+     
       <main className="h-full px-4 pb-4">
         {!showResult && (
           <Hero
@@ -164,7 +185,7 @@ export default function Home() {
                     handleDisplayResult={handleDisplayResult}
                     reset={reset}
                   />
-                </>
+                  </>
               </div>
 
               <div className="justify-center pt-1 sm:pt-2" ref={chatContainerRef}></div>
@@ -173,6 +194,6 @@ export default function Home() {
         )}
       </main>
       <Footer />
-    </>
+      /</div>
   );
 }

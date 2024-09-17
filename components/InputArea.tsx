@@ -29,7 +29,7 @@ const InputArea: FC<TInputAreaProps> = ({
       <input
         type="text"
         placeholder="Ask me anything..."
-        className="focus-visible::outline-0 my-1 w-full pl-5 font-light not-italic leading-[normal] text-[#1B1B16]/30 text-black outline-2 focus-visible:ring-0 focus-visible:ring-offset-0 sm:text-xl"
+        className="focus-visible::outline-0 my-1 w-full pl-5 font-light not-italic leading-[normal] text-[#1B1B16]/30 text-black outline-none focus-visible:ring-0 focus-visible:ring-offset-0 sm:text-xl"
         disabled={disabled}
         value={promptValue}
         required

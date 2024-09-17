@@ -44,7 +44,7 @@ export default function RootLayout({
         <PlausibleProvider domain="Data-Fusion.io" />
       </head>
       <body
-        className={`${inter.className} flex min-h-screen flex-col justify-between`}
+        className={`${inter.className} flex min-h-screen bg-[rgb(229,234,235)] flex-col justify-between`}
       >
         {children}
       </body>

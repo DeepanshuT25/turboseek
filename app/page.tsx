@@ -169,15 +169,6 @@ export default function Home() {
 
               <div className="justify-center pt-1 sm:pt-2" ref={chatContainerRef}></div>
             </div>
-            <div className="container fixed items-baseline px-30">
-              <InputArea
-                promptValue={promptValue}
-                setPromptValue={setPromptValue}
-                handleDisplayResult={handleDisplayResult}
-                disabled={loading}
-                reset={reset}
-              />
-            </div>
           </div>
         )}
       </main>

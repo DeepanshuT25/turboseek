@@ -30,17 +30,10 @@ export default function Answer({ answer }: { answer: string }) {
           </div>
           {answer && (
             <div className="flex items-center gap-3">
-              {/* <Image unoptimized
-                src="/img/link.svg"
-                alt="footer"
-                width={20}
-                height={20}
-                className="cursor-pointer"
-              /> */}
               <button
                 onClick={() => {
                   navigator.clipboard.writeText(answer.trim());
-                  toast("Answer copied to clipboard", {
+                  toast("Copied to clipboard", {
                     icon: "✂️",
                   });
                 }}
@@ -54,13 +47,6 @@ export default function Answer({ answer }: { answer: string }) {
                   className="cursor-pointer"
                 />
               </button>
-              {/* <Image unoptimized
-                src="/img/share.svg"
-                alt="footer"
-                width={20}
-                height={20}
-                className="cursor-pointer"
-              /> */}
             </div>
           )}
         </div>

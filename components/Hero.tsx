@@ -20,23 +20,16 @@ const Hero: FC<THeroProps> = ({
   return (
     <div className="flex flex-col items-center justify-center">
       <a
-        className="mb-4 inline-flex h-7 shrink-0 items-center gap-[9px] rounded-[50px] border-[0.5px] border-solid border-[#E6E6E6] bg-white px-3 py-4 shadow-[0px_1px_1px_0px_rgba(0,0,0,0.25)]"
-        href="https://www.together.ai/"
+        className="mb-4 inline-flex h-7 shrink-0 items-center gap-[9px] rounded-[50px] border-[0.5px] border-solid border-[#E6E6E6] bg-[#204544] px-3 py-4 shadow-[0px_1px_1px_0px_rgba(0,0,0,0.25)]"
+        href="https://www.datafusion.com/"
         target="_blank"
       >
-        <Image
-          unoptimized
-          src="/img/together-ai.svg"
-          alt="hero"
-          width={18}
-          height={18}
-        />
-        <span className="text-center text-base font-light leading-[normal] text-[#1B1B16]">
-          Powered by Together AI
+        <span className="text-center text-base font-light leading-[normal] text-white">
+          Created by Data-Fusion
         </span>
       </a>
       <h2 className="bg-custom-gradient bg-clip-text pb-7 pt-2 text-center text-3xl font-semibold leading-[normal] lg:text-[64px]">
-        Search smarter & faster
+        Search smarter & Deeper
       </h2>
 
       {/* input section */}
@@ -70,20 +63,6 @@ const Hero: FC<THeroProps> = ({
           </div>
         ))}
       </div>
-
-      {/* Github link section */}
-      <p className="text-center text-sm font-light leading-[normal] text-[#1B1B16]">
-        Fully open source!{" "}
-        <span className="text-sm font-medium underline">
-          <a
-            href="https://github.com/Nutlope/turboseek"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Star it on github.
-          </a>
-        </span>
-      </p>
     </div>
   );
 };
@@ -97,17 +76,17 @@ type suggestionType = {
 const suggestions: suggestionType[] = [
   {
     id: 1,
-    name: "How does photosynthesis work?",
+    name: "What is data-fusion?",
     icon: "/img/icon _leaf_.svg",
   },
   {
     id: 2,
-    name: "How can I get a 6 pack in 3 months?",
+    name: "How can I shedule my work?",
     icon: "/img/icon _dumbell_.svg",
   },
   {
     id: 3,
-    name: "Can you explain the theory of relativity?",
+    name: "Can you explain more about my project?",
     icon: "/img/icon _atom_.svg",
   },
 ];

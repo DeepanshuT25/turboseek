@@ -5,12 +5,11 @@ import "./globals.css";
 
 const inter = Lexend({ subsets: ["latin"] });
 
-let title = "Turbo Seek – AI Search Engine";
+let title = "Data-Fusion – AI Search Engine";
 let description =
   "Search smarter and faster with our open source AI search engine";
-let url = "https://turboseek.io/";
-let ogimage = "https://turboseek.io/og-image.png";
-let sitename = "TurboSeek.io";
+let url = "https://github.com/Ki55n/Data-Fusion";
+let sitename = "Data-Fusion";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -20,7 +19,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    images: [ogimage],
     title,
     description,
     url: url,
@@ -30,7 +28,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: [ogimage],
     title,
     description,
   },
@@ -44,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <PlausibleProvider domain="turboseek.io" />
+        <PlausibleProvider domain="Data-Fusion.io" />
       </head>
       <body
         className={`${inter.className} flex min-h-screen flex-col justify-between`}

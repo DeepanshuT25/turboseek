@@ -3,7 +3,7 @@ import { Toaster, toast } from "react-hot-toast";
 
 export default function Answer({ answer }: { answer: string }) {
   return (
-    <div className="container flex h-auto w-full shrink-0 gap-4 rounded-lg border border-solid border-[#C2C2C2] bg-white p-5 lg:p-10">
+    <div className="container flex h-auto w-full shrink-0 gap-4 rounded-lg border border-solid border-[#C2C2C2] bg-slate-300 p-5 lg:p-10">
       <div className="hidden lg:block">
         <Image
           unoptimized
@@ -14,7 +14,7 @@ export default function Answer({ answer }: { answer: string }) {
         />
       </div>
       <div className="w-full">
-        <div className="flex items-center justify-between pb-3">
+        <div className="flex items-center font-semibold justify-between pb-3">
           <div className="flex gap-4">
             <Image
               unoptimized
@@ -25,7 +25,7 @@ export default function Answer({ answer }: { answer: string }) {
               className="block lg:hidden"
             />
             <h3 className="text-base font-bold uppercase text-black">
-              Answer:{" "}
+              Solution:{" "}
             </h3>
           </div>
           {answer && (
@@ -33,7 +33,7 @@ export default function Answer({ answer }: { answer: string }) {
               <button
                 onClick={() => {
                   navigator.clipboard.writeText(answer.trim());
-                  toast("Copied to clipboard", {
+                  toast("Copied", {
                     icon: "✂️",
                   });
                 }}

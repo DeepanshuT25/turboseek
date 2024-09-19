@@ -10,7 +10,7 @@ const SimilarTopics = ({
   reset: () => void;
 }) => {
   return (
-    <div className="container flex h-auto w-full shrink-0 gap-4 rounded-lg border border-solid border-[#C2C2C2] bg-white p-5 lg:p-10">
+    <div className="container flex h-auto w-full shrink-0 gap-4 rounded-lg border border-solid border-[#C2C2C2] bg-slate-300 p-5 lg:p-10">
       <div className="hidden lg:block">
         <Image
           unoptimized

@@ -7,7 +7,7 @@ const inter = Lexend({ subsets: ["latin"] });
 
 let title = "Data-Fusion – AI Search Engine";
 let description =
-  "Search smarter and faster with our open source AI search engine";
+  "Analyse smarter and deeper with AI";
 let url = "https://github.com/Ki55n/Data-Fusion";
 let sitename = "Data-Fusion";
 
@@ -15,9 +15,6 @@ export const metadata: Metadata = {
   metadataBase: new URL(url),
   title,
   description,
-  icons: {
-    icon: "/favicon.ico",
-  },
   openGraph: {
     title,
     description,
@@ -25,11 +22,6 @@ export const metadata: Metadata = {
     siteName: sitename,
     locale: "en_US",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
   },
 };
 
@@ -44,7 +36,7 @@ export default function RootLayout({
         <PlausibleProvider domain="Data-Fusion.io" />
       </head>
       <body
-        className={`${inter.className} flex min-h-screen bg-[rgb(229,234,235)] flex-col justify-between`}
+        className={`${inter.className} bg-slate-700 /* made at https://learnui.design/tools/gradient-generator.html */ justify-between`}
       >
         {children}
       </body>

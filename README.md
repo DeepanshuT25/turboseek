@@ -1,16 +1,8 @@
-<a href="https://www.turboseek.io">
-  <img alt="Turbo Seek" src="./public/og-image.png">
-  <h1 align="center">TurboSeek</h1>
-</a>
-
-<p align="center">
-  An open source AI search engine. Powered by Together.ai.
-</p>
 
 ## Tech stack
 
 - Next.js app router with Tailwind
-- Together AI for LLM inference
+- Gemini-AI for LLM inference
 - Mixtral 8x7B & Llama-3 for the LLMs
 - Bing for the search API
 - Helicone for observability

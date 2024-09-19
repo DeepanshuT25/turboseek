@@ -131,13 +131,12 @@ export default function Home() {
     if (!showHero) {
       reset()
     } else {
-      // Navigate to previous page (you might want to use Next.js router here)
       window.history.back()
     }
   }
 
   return (
-    <div className="flex-grow relative overflow-hidden">
+    <div className="flex-grow relative overflow-hidden bg-slate-700 ">
     <header className="relative z-10 flex items-center justify-between p-4">
           <button
             onClick={handleBack}
@@ -160,8 +159,8 @@ export default function Home() {
         {showResult && (
           <div className="flex h-full min-h-[68vh] w-full grow flex-col justify-between">
             <div className="container w-full space-y-2">
-              <div className="container space-y-2">
-                <div className="container flex w-full items-start gap-3 px-5 pt-2 lg:px-10">
+              <div className="container space-y-2 ">
+                <div className="container flex w-full items-start gap-3 px-5 pt-2 lg:px-10 ">
                   <div className="flex w-fit items-center gap-4">
                     <Image
                       unoptimized
@@ -188,7 +187,7 @@ export default function Home() {
                   </>
               </div>
 
-              <div className="justify-center pt-1 sm:pt-2" ref={chatContainerRef}></div>
+              <div className="justify-center pt-1 sm:pt-2 bg-[rgb(239,242,243)]" ref={chatContainerRef}></div>
             </div>
           </div>
         )}
